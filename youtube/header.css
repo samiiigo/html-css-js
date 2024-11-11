@@ -1,0 +1,140 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 100;
+    border-bottom: 1px solid rgb(229, 229, 229);
+
+}
+.left-section {
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+}
+.hamburger-menu {
+    height: 24px;
+    margin: 24px;
+}
+.logo {
+    height: 20px;
+}
+
+
+.middle-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search-bar {
+    flex: 1;
+    height: 34px;
+    width: 0;
+    max-width: 500px;
+    border-width: 1px;
+    border-radius: 3px;
+    border-color: rgb(194, 194, 194);
+    box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.05);
+}
+.search-bar::placeholder {
+    font-size: 16px;
+    padding: 10px;
+}
+.search-button,
+.voice-search-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 66px;
+    border-width: 1px;
+    border-radius: 3px;
+    border-color: rgb(194, 194, 194);
+    margin-left: -1px;
+    position: relative;
+    white-space: nowrap;
+}
+
+.search-icon {
+    height: 25px;
+}
+.voice-search-button {
+    height: 40px;
+    width: 40px;
+    border: none;
+    border-radius: 50px;
+    margin-left: 10px;
+}
+.right-section {
+    width: 182px;
+    margin-left: 30px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 24px;
+}
+.upload-button,
+.yt-apps,
+.notifications,
+.user-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 24px;
+    width: 24px;
+    border: none;
+    position: relative;
+    white-space: nowrap;
+}
+.notification-count {
+    background-color: #cc0000;
+    padding: 3px;
+    border-radius: 10px;
+    border: 2px solid white;
+    color: white;
+    position: absolute;
+    font-size: 11px;
+    top: -3px;
+    right: -7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1px 5px;
+}
+.profile-pic {
+    height: 32px;
+    border-radius: 50px;
+}
+
+.search-button .tooltip,
+.voice-search-button .tooltip,
+.upload-button .tooltip,
+.yt-apps .tooltip,
+.notifications .tooltip,
+.user-profile .tooltip {
+    position: absolute;
+    color: white;
+    font-size: 10px;
+    padding: 4px 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    bottom: -30px;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.15s;
+}
+.search-button:hover .tooltip,
+.voice-search-button:hover .tooltip,
+.upload-button:hover .tooltip,
+.yt-apps:hover .tooltip,
+.notifications:hover .tooltip,
+.user-profile:hover .tooltip{
+    opacity: 1;
+}
